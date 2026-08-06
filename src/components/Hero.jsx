@@ -2,16 +2,15 @@ export default function Hero() {
   return (
     <section
       style={{
-        width: "1400px",
-        padding: "120px",
-        background: "#00BCD4"
+        maxWidth: "1400px",
+        margin: "0 auto",
+        padding: "100px 40px"
       }}
     >
       <h2
         style={{
-          fontSize: "18px",
-          fontWeight: 300,
-          color: "#F44336"
+          fontSize: "20px",
+          fontWeight: 400
         }}
       >
         Unlimited Movies
@@ -20,12 +19,10 @@ export default function Hero() {
       <p
         style={{
           fontSize: "10px",
-          width: "250px",
-          color: "#4CAF50",
-          lineHeight: 1
+          maxWidth: "260px"
         }}
       >
-        Watch thousands of blockbuster movies and TV shows anywhere in the world.
+        Watch thousands of blockbuster movies and TV shows from anywhere.
       </p>
 
       <button
