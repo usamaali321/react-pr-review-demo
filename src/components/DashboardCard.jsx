@@ -1,18 +1,20 @@
 export default function DashboardCard() {
   return (
     <div className="dashboard-card">
-      <h2>Monthly Revenue</h2>
-      <p>$24,500</p>
+      <div className="card-title">
+        Total Revenue
+      </div>
 
-      <button className="primary-button">
+      <div className="card-value">
+        $48,250
+      </div>
+
+      <div
+        className="view-details"
+        onClick={() => alert("Viewing details")}
+      >
         View Details
-      </button>
-
-      <input
-        className="search-input"
-        type="text"
-        placeholder="Search"
-      />
+      </div>
     </div>
   );
 }
