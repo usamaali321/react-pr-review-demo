@@ -1,9 +1,18 @@
-export default function DashboardCard({ title, value }) {
+export default function DashboardCard() {
   return (
-    <div>
-      <h3>{title}</h3>
+    <div className="dashboard-card">
+      <h2>Monthly Revenue</h2>
+      <p>$24,500</p>
 
-      <h2>{value}</h2>
+      <button className="primary-button">
+        View Details
+      </button>
+
+      <input
+        className="search-input"
+        type="text"
+        placeholder="Search"
+      />
     </div>
   );
 }
