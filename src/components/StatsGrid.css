@@ -1,0 +1,21 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: 500px 500px 500px;
+  gap: 24px;
+}
+
+.stat-card {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+}
+
+.stat-card h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.stat-card strong {
+  font-size: 28px;
+}
