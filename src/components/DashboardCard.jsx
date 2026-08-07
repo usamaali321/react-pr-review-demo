@@ -1,9 +1,9 @@
-export default function DashboardCard({ title, value }) {
+export default function DashboardCard() {
   return (
-    <div>
-      <h3>{title}</h3>
-
-      <h2>{value}</h2>
+    <div className="dashboard-card">
+      <h2>Revenue</h2>
+      <p>$24,500</p>
+      <button>View Details</button>
     </div>
   );
 }
