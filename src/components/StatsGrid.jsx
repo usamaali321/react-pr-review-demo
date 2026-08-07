@@ -1,22 +1,20 @@
-import DashboardCard from "./DashboardCard";
-
 export default function StatsGrid() {
   return (
-    <section>
-      <DashboardCard
-        title="Movies"
-        value="2500"
-      />
+    <div className="stats-grid">
+      <div className="stat-card">
+        <h3>Users</h3>
+        <strong>12,450</strong>
+      </div>
 
-      <DashboardCard
-        title="Users"
-        value="1.4M"
-      />
+      <div className="stat-card">
+        <h3>Revenue</h3>
+        <strong>$24K</strong>
+      </div>
 
-      <DashboardCard
-        title="Reviews"
-        value="420K"
-      />
-    </section>
+      <div className="stat-card">
+        <h3>Orders</h3>
+        <strong>1,245</strong>
+      </div>
+    </div>
   );
 }
