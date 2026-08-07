@@ -1,21 +1,30 @@
 .stats-grid {
   display: grid;
-  grid-template-columns: 500px 500px 500px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-.stat-card {
+.dashboard-card {
   padding: 24px;
   background: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 12px;
 }
 
-.stat-card h3 {
-  margin: 0 0 12px;
-  font-size: 18px;
+.card-title {
+  font-size: 16px;
+  color: #555555;
 }
 
-.stat-card strong {
-  font-size: 28px;
+.card-value {
+  margin-top: 8px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #17103d;
+}
+
+.view-details {
+  margin-top: 16px;
+  color: #17103d;
+  cursor: pointer;
 }
