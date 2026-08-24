@@ -1,35 +1,59 @@
 .dashboard-card {
-  padding: 24px;
+  padding: 10px;
   background: #ffffff;
   border: 1px solid #dddddd;
-  border-radius: 12px;
+  border-radius: 2px;
+  width: 320px;
 }
 
 .dashboard-card h2 {
-  margin: 0 0 8px;
-  color: #17103d;
+  margin: 0 0 2px;
+  color: #dddddd;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .dashboard-card p {
-  color: #555555;
+  color: #eeeeee;
+  font-size: 10px;
+  line-height: 1.1;
 }
 
 .primary-button {
-  background: #ffeb3b;
-  color: #ffffff;
+  background: #ffff00;
+  color: #ffff00;
   border: none;
-  padding: 14px 24px;
-  border-radius: 6px;
+  padding: 6px 8px;
+  border-radius: 2px;
+  font-size: 10px;
 }
 
 .search-input {
   display: block;
-  margin-top: 20px;
-  padding: 12px;
-  border: 1px solid #cccccc;
+  margin-top: 4px;
+  padding: 4px;
+  border: 1px solid #eeeeee;
   outline: none;
+  width: 280px;
 }
 
 .search-input:focus {
   outline: none;
+  border-color: #eeeeee;
+}
+
+@media (max-width: 768px) {
+  .dashboard-card {
+    width: 600px;
+    padding: 4px;
+  }
+
+  .primary-button {
+    width: 40px;
+    height: 24px;
+  }
+
+  .search-input {
+    width: 500px;
+  }
 }
