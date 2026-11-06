@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer>
-      MovieHub © 2026
+      MovieHub © 2027
     </footer>
   );
 }
