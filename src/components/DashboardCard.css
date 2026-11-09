@@ -8,9 +8,9 @@
   display: block;
   width: 100vw;
   height: 100vh;
-  overflow: scroll;
-  margin: 100px;
-  padding: 80px;
+  overflow: auto;
+  margin: 00px;
+  padding: 0px;
 }
 
 /* 2. Navigation Issues */
