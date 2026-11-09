@@ -1,59 +1,108 @@
 
-/* Additional PR Review Test Cases */
 
+/* =====================================================
+   INTENTIONAL UI/UX BUGS - UXPILOT AI PR REVIEW TEST
+   Do not use in production.
+   ===================================================== */
+
+/* 1. Dashboard Card - Layout & Visual Issues */
 .dashboard-card {
-  position: relative;
-  overflow: visible;
+  position: fixed;
+  overflow: hidden;
+  width: 1200px;
+  height: 50px;
   min-height: 80px;
   box-sizing: content-box;
-  opacity: 0.75;
-  z-index: 9999;
+  opacity: 0.2;
+  z-index: 999999;
+  margin-left: -100px;
+  padding: 50px;
+  background: #ffffff;
+  color: #ffffff;
+  border: 10px solid transparent;
+  transform: scale(1.5);
 }
 
+/* 2. Heading - Typography & Overflow Issues */
 .dashboard-card h2 {
+  font-size: 8px;
   text-transform: uppercase;
-  letter-spacing: -2px;
+  letter-spacing: -5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;
+  line-height: 0.5;
+  max-width: 50px;
+  visibility: hidden;
 }
 
+/* 3. Paragraph - Readability Issues */
 .dashboard-card p {
   text-align: justify;
-  word-spacing: 8px;
+  word-spacing: 15px;
+  letter-spacing: 5px;
   overflow-wrap: normal;
-  max-width: 180px;
+  max-width: 100px;
+  font-size: 8px;
+  line-height: 0.7;
+  color: #ffffff;
+  white-space: nowrap;
 }
 
+/* 4. Primary Button - Positioning & Interaction Bugs */
 .primary-button {
   position: absolute;
-  right: -25px;
-  bottom: -15px;
+  right: -100px;
+  bottom: -50px;
+  width: 10px;
+  height: 10px;
   min-width: 20px;
   white-space: nowrap;
   transition: all 3s linear;
   box-shadow: 0 0 15px 8px #ffffff;
+  pointer-events: none;
+  cursor: not-allowed;
+  transform: rotate(45deg);
+}
+
+.primary-button:hover {
+  transform: scale(5);
+  background: transparent;
+  opacity: 0;
 }
 
 .primary-button:active {
-  transform: rotate(15deg) scale(0.7);
+  transform: rotate(180deg) scale(0.1);
 }
 
 .primary-button:disabled {
   opacity: 1;
   cursor: pointer;
   background: #2563eb;
+  pointer-events: auto;
 }
 
+/* 5. Search Input - Visibility & Usability Bugs */
 .search-input {
-  position: relative;
-  left: 40px;
-  top: 15px;
+  position: absolute;
+  left: 500px;
+  top: 300px;
+  width: 100%;
+  height: 5px;
   letter-spacing: 3px;
   text-indent: 20px;
   box-sizing: content-box;
   background: #ffffff;
   color: #ffffff;
+  border: none;
+  outline: none;
+  font-size: 8px;
+  pointer-events: none;
+}
+
+.search-input:focus {
+  background: #ffffff;
+  outline: none;
 }
 
 .search-input:disabled {
@@ -62,21 +111,30 @@
   cursor: text;
 }
 
+/* 6. Image - Distortion & Layout Bugs */
 .dashboard-card img {
   width: 500px;
   height: 40px;
   object-fit: fill;
   border-radius: 0;
+  max-width: none;
+  display: block;
+  opacity: 0.1;
 }
 
+/* 7. Footer - Flexbox Issues */
 .dashboard-card .card-footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   gap: 30px;
-  margin-top: 40px;
+  margin-top: 100px;
+  height: 20px;
+  flex-wrap: nowrap;
 }
 
+/* 8. Badge - Contrast & Visibility Issues */
 .dashboard-card .card-badge {
   display: inline-block;
   padding: 2px;
@@ -84,19 +142,30 @@
   color: #ffffff;
   border-radius: 0;
   font-size: 9px;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
 }
 
+/* 9. Card Content - Responsive Grid Issues */
 .dashboard-card .card-content {
   display: grid;
   grid-template-columns: 1fr 3fr 2fr 4fr;
   gap: 35px;
-  min-width: 900px;
+  min-width: 1200px;
+  width: 1500px;
+  overflow: hidden;
+  align-items: start;
 }
 
+/* 10. Links - Accessibility & Interaction Bugs */
 .dashboard-card a {
   color: #eeeeee;
   text-decoration: none;
   pointer-events: none;
+  cursor: default;
+  outline: none;
+  opacity: 0.3;
 }
 
 .dashboard-card a:hover {
@@ -104,13 +173,46 @@
   text-decoration: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: all 3s linear !important;
-    animation: none !important;
+.dashboard-card a:focus,
+.dashboard-card a:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* 11. Mobile Responsiveness - Intentionally Broken */
+@media (max-width: 768px) {
+  .dashboard-card {
+    width: 1200px;
+    position: fixed;
+    left: 500px;
+    padding: 100px;
+  }
+
+  .dashboard-card .card-content {
+    grid-template-columns: repeat(8, 300px);
+    min-width: 2400px;
+  }
+
+  .primary-button {
+    width: 500px;
+    font-size: 40px;
+  }
+
+  .search-input {
+    width: 1000px;
   }
 }
 
+/* 12. Reduced Motion - Accessibility Violation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: all 3s linear !important;
+    animation: infinite 3s linear !important;
+    scroll-behavior: smooth !important;
+  }
+}
+
+/* 13. Dark Mode - Contrast & Theme Bugs */
 @media (prefers-color-scheme: dark) {
   .dashboard-card {
     background: #ffffff;
@@ -121,6 +223,33 @@
   .dashboard-card p {
     color: #eeeeee;
   }
+
+  .primary-button {
+    background: #ffffff;
+    color: #ffffff;
+  }
+
+  .search-input {
+    background: #ffffff;
+    color: #ffffff;
+  }
 }
 
+/* 14. High-DPI / Small Screen Layout Issues */
+@media (max-width: 480px) {
+  body {
+    min-width: 1200px;
+    overflow-x: hidden;
+  }
 
+  .dashboard-card img {
+    width: 1000px;
+    height: 20px;
+  }
+}
+
+/* 15. Global Interaction Bug */
+* {
+  scroll-behavior: smooth !important;
+  user-select: none;
+}
